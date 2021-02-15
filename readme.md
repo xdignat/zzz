@@ -52,7 +52,7 @@ docker-compose exec app php artisan migrate
   "password": "root"
 }
 ```
-
+Можно использовать [файл экспорта для Postman](docs/zzz.postman_collection.json) 
 # Результат
 
 - [Методы](docs/api.md)
