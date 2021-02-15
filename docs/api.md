@@ -61,6 +61,6 @@
 |[subscribe_set](api/subscribe_set.md)|Установить данные подписки|
 |[subscribe_add](api/subscribe_add.md)|Подписаться|
 |[subscribe_delete](api/subscribe_delete.md)|Отписаться|
-|[subscribe_user_rubric](api/subscribe_user_rubric.md)|Получить список подписок для пользователя|
+|[subscribe_user_rubrics](api/subscribe_user_rubrics.md)|Получить список подписок для пользователя|
 |[subscribe_user_clear](api/subscribe_user_clear.md)|Отписать пользователя от всех рубрик|
 |[subscribe_rubric_users](api/subscribe_rubric_users.md)|Получить список подписчиков рубрики|
