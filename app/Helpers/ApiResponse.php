@@ -14,6 +14,7 @@ use App\Helpers\ApiSession;
  */
 class ApiResponse
 {
+    public static $acceptXml;
     /**
      * Вернуть http ответ
      * @param mix $value
@@ -111,11 +112,11 @@ class ApiResponse
      */
     private static function acceptXml()
     {
-        $request = request();
-
-        $json = $request->accepts('application/json');
-        $xml = $request->accepts('application/xml');
-
-        return (!$json && $xml);
+        if (!isset(self::$acceptXml)) {
+            $request = request();
+            self::$acceptXml = ($request->input('format') == 'xml')
+                || (!$request->accepts('application/json') && $request->accepts('application/xml'));
+        }
+        return self::$acceptXml;
     }
 }

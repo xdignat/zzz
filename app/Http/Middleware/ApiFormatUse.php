@@ -11,10 +11,6 @@ class ApiFormatUse
     {
         // костыли, чтобы Laravel обрабатывал данные по умолчанию как JSON
         $request->headers->set('CONTENT_TYPE', 'application/json');
-        $xml = $request->accepts('application/xml') ?? ($request->input('format') == 'xml');
-        if (!$xml) {
-            $request->headers->set('Accept', 'application/json');
-        }
 
         $response = $next($request);
 
