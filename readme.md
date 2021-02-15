@@ -53,6 +53,17 @@ docker-compose exec app php artisan migrate
 }
 ```
 Можно использовать [файл экспорта для Postman](docs/zzz.postman_collection.json) 
+
+# Версии
+
+```
+Laravel: 5.6
+MySql: 5.7
+php: 7.4
+Docker: 20.10
+Docker-composer: 1.28
+```
+
 # Результат
 
 - [Методы](docs/api.md)
