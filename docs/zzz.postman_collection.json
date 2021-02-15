@@ -1,0 +1,555 @@
+{
+	"info": {
+		"_postman_id": "e44cac0d-11db-5fb9-64fb-98ae7809f5f0",
+		"name": "zzz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "session",
+			"item": [
+				{
+					"name": "session_open",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user\": \"admin\",\n  \"password\": \"123456\"\n}"
+						},
+						"url": "http://localhost/api/session_open"
+					},
+					"response": []
+				},
+				{
+					"name": "session_info",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"gsyhxeXNdlpp4IDYl7DI3B1bgfOZAzoUcZp9qzlq\"\n}"
+						},
+						"url": "http://localhost/api/session_info"
+					},
+					"response": []
+				},
+				{
+					"name": "session_close",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"laaVUVJ54Am8aHzbad8q6z0Mgpi6qoX3MCKajkMq\"\n}"
+						},
+						"url": "http://localhost/api/session_close"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "user_list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page_size\": 5,\n  \"page_num\": 1\n}"
+						},
+						"url": "http://localhost/api/user_list"
+					},
+					"response": []
+				},
+				{
+					"name": "user_exist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": \"admin\"\n}"
+						},
+						"url": "http://localhost/api/user_exist"
+					},
+					"response": []
+				},
+				{
+					"name": "user_get",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": \"root\"\n}"
+						},
+						"url": "http://localhost/api/user_get"
+					},
+					"response": []
+				},
+				{
+					"name": "user_set",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": \"2\",\n    \"values\": {\n        \"enabled\": false\n    }\n}"
+						},
+						"url": "http://localhost/api/user_set"
+					},
+					"response": []
+				},
+				{
+					"name": "user_add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"values\": {\n        \"user\": \"myUser\",\n        \"email\": \"email@domain.com\",\n        \"password\": \"123456\",\n        \"group\": \"users\"\n    }\n}"
+						},
+						"url": "http://localhost/api/user_add"
+					},
+					"response": []
+				},
+				{
+					"name": "user_delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"email@domain.com\"\n}"
+						},
+						"url": "http://localhost/api/user_delete"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "group",
+			"item": [
+				{
+					"name": "group_exist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"group\": \"users\"\n}"
+						},
+						"url": "http://localhost/api/group_exist"
+					},
+					"response": []
+				},
+				{
+					"name": "group_get",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"group\": \"users\"\n}"
+						},
+						"url": "http://localhost/api/group_get"
+					},
+					"response": []
+				},
+				{
+					"name": "group_set",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"group\": \"users\",\n    \"values\": {\n        \"description\": \"users test\",\n        \"enabled\": true,\n        \"default\": true\n    }\n}"
+						},
+						"url": "http://localhost/api/group_set"
+					},
+					"response": []
+				},
+				{
+					"name": "group_list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page_size\": 5,\n  \"page_num\": 1\n}"
+						},
+						"url": "http://localhost/api/group_list"
+					},
+					"response": []
+				},
+				{
+					"name": "group_delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"group\": \"my group\"\n}"
+						},
+						"url": "http://localhost/api/group_delete"
+					},
+					"response": []
+				},
+				{
+					"name": "group_add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"values\": {\n        \"group\": \"my group\",\n        \"description\": \"zzz\"\n    }\n}"
+						},
+						"url": "http://localhost/api/group_add"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "app",
+			"item": [
+				{
+					"name": "app_exist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"app\": \"web\"\n}"
+						},
+						"url": "http://localhost/api/app_exist"
+					},
+					"response": []
+				},
+				{
+					"name": "app_get",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"app\": \"web\"\n}"
+						},
+						"url": "http://localhost/api/app_get"
+					},
+					"response": []
+				},
+				{
+					"name": "app_set",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"app_id\": \"1\",\n    \"values\": {\n        \"description\": \"users test 3\",\n        \"enabled\": true,\n        \"default\": true\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost/api/app_set"
+					},
+					"response": []
+				},
+				{
+					"name": "app_add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"values\": {\n        \"app\": \"my app 7\",\n        \"description\": \"zzz\",\n        \"default\": true\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost/api/app_add"
+					},
+					"response": []
+				},
+				{
+					"name": "app_delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"app\": \"my app\"\n}"
+						},
+						"url": "http://localhost/api/app_delete"
+					},
+					"response": []
+				},
+				{
+					"name": "app_list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page_size\": 5,\n  \"page_num\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost/api/app_list"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rubrics",
+			"item": [
+				{
+					"name": "rubric_exist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rubric\": \"news\"\n}"
+						},
+						"url": "http://localhost/api/rubric_exist"
+					},
+					"response": []
+				},
+				{
+					"name": "rubric_add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"values\": {\n        \"rubric\": \"news\",\n        \"description\": \"deee\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost/api/rubric_add"
+					},
+					"response": []
+				},
+				{
+					"name": "rubric_get",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rubric\": \"news\"\n}"
+						},
+						"url": "http://localhost/api/rubric_get"
+					},
+					"response": []
+				},
+				{
+					"name": "rubric_set",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rubric_id\": \"1\",\n    \"values\": {\n        \"description\": \"users test 3\",\n        \"enabled\": false\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost/api/rubric_set"
+					},
+					"response": []
+				},
+				{
+					"name": "rubric_delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"rubric\": \"news\"\n}"
+						},
+						"url": "http://localhost/api/rubric_delete"
+					},
+					"response": []
+				},
+				{
+					"name": "rubric_list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page_size\": 5,\n  \"page_num\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost/api/rubric_list"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subscribe",
+			"item": [
+				{
+					"name": "subscribe_get",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rubric\" : \"history\",\n    \"user\": \"myuser\",    \n    \"//subscribe_id\": \"2\"\n}"
+						},
+						"url": "http://localhost/api/subscribe_get"
+					},
+					"response": []
+				},
+				{
+					"name": "subscribe_set",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rubric\" : \"history\",\n    \"user\": \"root\",\n    \"values\" : {\n        \"user_name\": \"h h h 4 \"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost/api/subscribe_set"
+					},
+					"response": []
+				},
+				{
+					"name": "subscribe_add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"values\" : {\n        \"rubric\" : \"history\",\n        \"user\": \"myuser\",\n        \"user_name\": \"h h h 4 \",\n        \"aa2\": \"2\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost/api/subscribe_add"
+					},
+					"response": []
+				},
+				{
+					"name": "subscribe_delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rubric\" : \"History\",\n    \"user\": \"myuser\",    \n    \"subscribe_id\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost/api/subscribe_delete"
+					},
+					"response": []
+				},
+				{
+					"name": "subscribe_rubric_users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rubric\" : \"history\",\n    \"user\": \"myuser\",    \n    \"//subscribe_id\": \"2\"\n}"
+						},
+						"url": "http://localhost/api/subscribe_rubric_users"
+					},
+					"response": []
+				},
+				{
+					"name": "subscribe_user_rubrics",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rubric\" : \"history\"\n}"
+						},
+						"url": "http://localhost/api/subscribe_user_rubrics"
+					},
+					"response": []
+				},
+				{
+					"name": "subscribe_user_clear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": \"root\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost/api/subscribe_user_clear"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"aa\":22}"
+				},
+				"url": "http://localhost/api/status"
+			},
+			"response": []
+		}
+	]
+}
