@@ -40,9 +40,11 @@ docker-compose exec app php artisan migrate
 ```
 Проверка в баузере
 ```http://localhost:8080``` adminer - редактор БД (пользователь: user, пароль: pass)
+
 ```http://localhost/api/status``` поверка проекта
 
 Все остальные методы работают через POST
+
 Можно начать с получения токена: ```http://localhost/api/session_open```
 ```json
 {
