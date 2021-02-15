@@ -10,7 +10,8 @@ class ApiSessionUse
 {
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
+        //Разкоментироать, чтобы отключить сессии
+        //return $next($request);
 
         $response = ApiSession::responseCheck();
         $response = $response ?? $next($request);
